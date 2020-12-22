@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "manageappb329b1c3_identitypool_b329b1c3",
+    "identityPoolName": "manageapp12de2e4f_identitypool_12de2e4f",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "manageb329b1c3",
-    "userPoolName": "manageappb329b1c3_userpool_b329b1c3",
+    "resourceNameTruncated": "manage12de2e4f",
+    "userPoolName": "manageapp12de2e4f_userpool_12de2e4f",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "manageb329b1c3_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "manage12de2e4f_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "manageappb329b1c3",
+    "resourceName": "manageapp12de2e4f",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

@@ -1,25 +1,43 @@
 {
     "production": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-manageapp-production-10305-authRole",
-            "UnauthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-production-10305-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-production-10305-authRole",
+            "AuthRoleName": "amplify-manageapp-production-15045-authRole",
+            "UnauthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-production-15045-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-production-15045-authRole",
             "Region": "ap-northeast-1",
-            "DeploymentBucketName": "amplify-manageapp-production-10305-deployment",
-            "UnauthRoleName": "amplify-manageapp-production-10305-unauthRole",
-            "StackName": "amplify-manageapp-production-10305",
-            "StackId": "arn:aws:cloudformation:ap-northeast-1:762686035370:stack/amplify-manageapp-production-10305/2e4ae150-446f-11eb-bdcb-0e5204562a73",
-            "AmplifyAppId": "d28en9cntaid5b"
+            "DeploymentBucketName": "amplify-manageapp-production-15045-deployment",
+            "UnauthRoleName": "amplify-manageapp-production-15045-unauthRole",
+            "StackName": "amplify-manageapp-production-15045",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:762686035370:stack/amplify-manageapp-production-15045/d7dfc180-4475-11eb-84b9-0a6a4edc26e4",
+            "AmplifyAppId": "d1497zjyo5lmtv"
         },
         "categories": {
             "auth": {
-                "manageappb329b1c3": {}
+                "manageapp12de2e4f": {}
             },
             "hosting": {
                 "amplifyhosting": {
-                    "appId": "d28en9cntaid5b",
+                    "appId": "d1497zjyo5lmtv",
                     "type": "cicd"
                 }
+            }
+        }
+    },
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-manageapp-develop-15936-authRole",
+            "UnauthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-develop-15936-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::762686035370:role/amplify-manageapp-develop-15936-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-manageapp-develop-15936-deployment",
+            "UnauthRoleName": "amplify-manageapp-develop-15936-unauthRole",
+            "StackName": "amplify-manageapp-develop-15936",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:762686035370:stack/amplify-manageapp-develop-15936/132b8bb0-4477-11eb-a277-0a326cc6f6b0",
+            "AmplifyAppId": "d1497zjyo5lmtv"
+        },
+        "categories": {
+            "auth": {
+                "manageapp12de2e4f": {}
             }
         }
     }

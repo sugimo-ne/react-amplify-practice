@@ -1,6 +1,6 @@
 {
     "auth": {
-        "manageappb329b1c3": {
+        "manageapp12de2e4f": {
             "service": "Cognito",
             "providerPlugin": "awscloudformation",
             "dependsOn": [],
