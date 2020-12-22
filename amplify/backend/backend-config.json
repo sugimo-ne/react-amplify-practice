@@ -1,10 +1,16 @@
 {
-	"auth": {
-		"snsapi377bad8f": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"customAuth": false
-		}
-	}
+    "auth": {
+        "manageappb329b1c3": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [],
+            "customAuth": false
+        }
+    },
+    "hosting": {
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "type": "cicd"
+        }
+    }
 }
