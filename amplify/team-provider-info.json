@@ -38,6 +38,12 @@
         "categories": {
             "auth": {
                 "manageapp12de2e4f": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1497zjyo5lmtv",
+                    "type": "cicd"
+                }
             }
         }
     }
