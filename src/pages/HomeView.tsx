@@ -1,10 +1,11 @@
 import React from "react"
+import {PageWithSidebar as Layout} from "../layout/PageWithSidebar"
 
 const HomeView: React.FunctionComponent = () => {
     return(
-        <div>
+        <Layout title="Home">
             <h1>Home</h1>
-        </div>
+        </Layout>
     )
 }
 
