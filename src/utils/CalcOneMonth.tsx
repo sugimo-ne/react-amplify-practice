@@ -6,12 +6,14 @@ export const calcDate = (year:number|null , date:any|null) => {
     const getMonth = dateData.getMonth()
     const getDate = dateData.getDate()
     const getDay = dateData.getDay()
+    const getDaycConvertion = week[getDay]
     return {
         dateData,
         getYear,
         getMonth,
         getDate,
-        getDay
+        getDay,
+        getDaycConvertion
     }
 }
 
