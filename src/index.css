@@ -27,8 +27,14 @@ code {
 .w-75 {
   width: 75%;
 }
+.w-60 {
+  width: 60%;
+}
 .w-50 {
   width: 50%;
+}
+.w-40 {
+  width: 40%;
 }
 .w-25 {
   width: 25%;
@@ -39,4 +45,44 @@ code {
 
 .fixed {
   position: fixed;
+}
+
+.p-5 {
+  padding: 5px;
+}
+.p-10 {
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.right {
+  right: 0;
+}
+.left {
+  left: 0;
+}
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.sub_column {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }

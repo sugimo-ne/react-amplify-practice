@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "MyhabiGql",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmanageapp12de2e4f",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

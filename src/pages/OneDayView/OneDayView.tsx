@@ -2,11 +2,9 @@ import React , { useState , useEffect } from "react"
 import {PageWithSidebar as Layout} from "../../layout/PageWithSidebar"
 import "./index.css"
 
-import AddTip from '../../components/atoms/ToolTips/AddTip'
-import PaperGroup from '../../components/molecules/Paper/PaperGroup'
+
 import {calcDate} from '../../utils/CalcOneMonth'
 import OneDaySchedule from '../../components/templates/OneDaySchedule/OneDaySchedule'
-import Todo from '../../components/organism/Todo/Todo'
 
 interface todayData{
     priority:number,
@@ -66,18 +64,46 @@ const HomeView: React.FunctionComponent = () => {
     } , [])
     return(
         <Layout title="本日の日程">
-            <div className="flex">
-                <div className="w-60">
-                <h1>{getYear}年{getMonth + 1}月{getDate}日</h1>
-                <p>{getDaycConvertion}曜日</p>
-                <OneDaySchedule></OneDaySchedule>
+            <div>
+                <div className="flex">
+                    <div className="w-75">
+                    <h1>{getYear}年{getMonth + 1}月{getDate}日</h1>
+                    <p>{getDaycConvertion}曜日</p>
+                    <OneDaySchedule></OneDaySchedule>
+                    </div>
+                    <div className="w-25">
+                    <div className="fixed">
+                        <div>
+                            <h3>今週のtodo</h3>
+                            <ul>
+                                {
+                                    todos.map((item:todayData) => {
+                                        return(
+                                            <li>
+                                                {item.name}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>睡眠予定時間xxまでのTodo</h3>
+                            <ul>
+                                {
+                                    todos.map((item:todayData) => {
+                                        return(
+                                            <li>
+                                                {item.name}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    </div> 
                 </div>
-                <div className="w-40">
-                <div className="sub_column" style={{"paddingTop":"80px"}}>
-                    <Todo todos={todos} title={"睡眠予定時間xxまでのTodo"}></Todo>
-                    <Todo todos={todos} title={"一週間分のTodo"}></Todo>
-                </div>
-                </div> 
             </div>
         </Layout>
     )

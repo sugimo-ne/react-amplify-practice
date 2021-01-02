@@ -1,0 +1,32 @@
+type OnedayTodo
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "owner"
+        provider: userPools
+        operations: [read, create, update, delete]
+      }
+    ]
+  )
+  @key(
+    name: "SortedByPriority"
+    fields: ["type", "priority"]
+    queryField: "ListOnedayTodosSortedByPriority"
+  )
+  @key(
+    name: "SortedByDate"
+    fields: ["type", "date"]
+    queryField: "ListOnedayTodosSortedByDate"
+  ) {
+  id: ID
+  priority: String!
+  name: String!
+  is_conplete: Boolean!
+  description: String!
+  type: String!
+  date: AWSDate!
+  kindOf: String!
+  is_deleted: Boolean!
+}
