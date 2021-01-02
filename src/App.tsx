@@ -11,6 +11,7 @@ import awsmobile from './aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
 import HomeView from "./pages/HomeView/HomeView"
 import CalenderView from "./pages/CalenderView/CalenderView"
+import ScheduleCreateView from './pages/ScheduleCreateView/ScheduleCreateView'
 
 Amplify.configure(awsmobile);
 export const App: React.FunctionComponent=() => {
@@ -19,6 +20,7 @@ export const App: React.FunctionComponent=() => {
       <Switch>
         <Route exact path="/" component={HomeView}></Route>
         <Route exact path="/clender" component={CalenderView}></Route>
+        <Route path="/schedule/create/:id" component={ScheduleCreateView}></Route>
       </Switch>
     </Router>
   )

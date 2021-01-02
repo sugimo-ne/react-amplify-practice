@@ -16,6 +16,7 @@ import Typography from '@material-ui/core/Typography';
 
 import CardCell from "../../atoms/CardCell"
 import {CalcOneMonth} from "../../../utils/CalcOneMonth"
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -96,9 +97,11 @@ const createCalender = (days:any , row:number) => {
       { 
         days.slice(i*7 -7, i * 7).map((day:any) => {
           return <GridListTile>
+          <Link to={"/schedule/create/" + day.date}>
           {
             renderDayCell(day.date , null)
           }
+          </Link>
         </GridListTile>
         })
       }

@@ -3,6 +3,8 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid, { GridSpacing } from '@material-ui/core/Grid';
 
 import PaperGroup from '../../molecules/Paper/PaperGroup'
+import BasicTable from '../../molecules/Table/BasicTable'
+import AddTip from '../../atoms/ToolTips/AddTip'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,7 +30,7 @@ const renderSchedule = (title:string , schedule:any) => {
     return(
         <div>
             <h2>{title}</h2>
-            <ul>
+            {/* <ul>
                 {
                     schedule.map((item:any , index:any) => {
                         return(
@@ -38,7 +40,8 @@ const renderSchedule = (title:string , schedule:any) => {
                         )  
                     })
                 }
-            </ul>
+            </ul> */}
+            <BasicTable></BasicTable>
         </div>
     )
 }
@@ -55,7 +58,7 @@ const OneDaySchedule: React.FunctionComponent = () => {
                 {
                     renderSchedule("あなたの行動" , schedule)
                 }
-
+               
             </PaperGroup>
             </Grid>
             <Grid item xs={6}>
@@ -63,6 +66,7 @@ const OneDaySchedule: React.FunctionComponent = () => {
             {
                     renderSchedule("予定スケジュール" , schedule)
                 }
+               
             </PaperGroup>
             </Grid>
         </Grid>

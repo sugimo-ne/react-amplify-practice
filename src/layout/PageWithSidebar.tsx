@@ -88,7 +88,7 @@ export const PageWithSidebar: React.FunctionComponent <Props> = ({children , win
       {
           icon:<AssessmentIcon />,
           text:"予定・結果",
-          link:"strategy"
+          link:"/strategy"
       }
   ]
 
@@ -96,7 +96,7 @@ export const PageWithSidebar: React.FunctionComponent <Props> = ({children , win
       {
           icon:<SettingsIcon />,
           text:"設定",
-          link:"settings"
+          link:"/settings"
       }
   ]
 
