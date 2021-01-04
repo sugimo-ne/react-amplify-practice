@@ -15,14 +15,15 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props{
     color:any,
     text:string
+    onClick:() => void
 }
 
-const OutlinedButton: React.FunctionComponent<Props> = ({color , text}) => {
+const OutlinedButton: React.FunctionComponent<Props> = ({color , text , onClick}) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined" color={color}>
+      <Button variant="outlined" color={color} onClick={onClick}>
         {text}
       </Button>
     </div>

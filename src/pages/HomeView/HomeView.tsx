@@ -1,12 +1,15 @@
 import React , { useState , useEffect } from "react"
 import {PageWithSidebar as Layout} from "../../layout/PageWithSidebar"
 import "./index.css"
+import API, { graphqlOperation } from "@aws-amplify/api";
 
 import AddTip from '../../components/atoms/ToolTips/AddTip'
 import PaperGroup from '../../components/molecules/Paper/PaperGroup'
 import {calcDate} from '../../utils/CalcOneMonth'
 import OneDaySchedule from '../../components/templates/OneDaySchedule/OneDaySchedule'
 import Todo from '../../components/organism/Todo/Todo'
+
+import {createOnedayTodo} from '../../graphql/mutations'
 
 interface todayData{
     priority:number,
@@ -15,7 +18,6 @@ interface todayData{
     description:string,
     type:string
 }
-
 
 const HomeView: React.FunctionComponent = () => {
     const [todos , setTodos] = useState<todayData[]>([])
@@ -31,7 +33,14 @@ const HomeView: React.FunctionComponent = () => {
         getDay,
         getDaycConvertion
     } = date
-
+    const digit = (number:number) => {
+        let numToString = number.toString()
+        if(number < 10){
+            numToString = "0"+numToString
+        }
+        return numToString
+    }
+    const today = `${getYear}-${digit(getMonth + 1)}-${digit(getDate)}`
     const fetchToday = () => {
         const todoData:todayData[] = [
             {
@@ -64,6 +73,7 @@ const HomeView: React.FunctionComponent = () => {
     useEffect(() => {
         fetchToday()
     } , [])
+
     return(
         <Layout title="本日の日程">
             <div className="flex">
@@ -74,8 +84,8 @@ const HomeView: React.FunctionComponent = () => {
                 </div>
                 <div className="w-40">
                 <div className="sub_column" style={{"paddingTop":"80px"}}>
-                    <Todo todos={todos} title={"睡眠予定時間xxまでのTodo"}></Todo>
-                    <Todo todos={todos} title={"一週間分のTodo"}></Todo>
+                    <Todo todos={todos} title={"睡眠予定時間xxまでのTodo"} postType={"OnedayTodo"} today={today}></Todo>
+                    <Todo todos={todos} title={"一週間分のTodo"} postType={""} today={today}></Todo>
                 </div>
                 </div> 
             </div>
